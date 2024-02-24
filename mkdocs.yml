@@ -1,0 +1,43 @@
+site_name: CSE314A - Data Manipulation and Management - FL23
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/hat-cowboy
+  features:
+  - content.code.copy
+  - content.tabs.link
+  - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: teal
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - markdown_captions
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - mkdocs-nav-weight
